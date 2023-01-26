@@ -67,8 +67,8 @@
         <pagination :pagination="pagination" @change-page="getProducts"></pagination>
       </div>
       <!-- Modal -->
-      <product-modal :temp-product="tempProduct" :operate-type="operateType" @reload-page="getProducts(pagination.current_page)"></product-modal>
-      <del-product-modal :temp-product="tempProduct" @reload-page="getProducts"></del-product-modal>
+      <product-modal ref="productModal" :temp-product="tempProduct" :operate-type="operateType" @reload-page="getProducts(pagination.current_page)"></product-modal>
+      <del-product-modal ref="delProductModal" :temp-product="tempProduct" @reload-page="getProducts"></del-product-modal>
       <!-- Modal -->
     </div>
 
